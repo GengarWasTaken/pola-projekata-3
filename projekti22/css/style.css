@@ -1,0 +1,374 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+}
+
+body .container {
+  position: relative;
+  height: 200vh;
+  width: 80vw;
+  display: -ms-grid;
+  display: grid;
+  margin-top: 1.5rem;
+  -ms-grid-columns: .5fr 1fr 1fr 1fr .5fr;
+      grid-template-columns: .5fr 1fr 1fr 1fr .5fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: ". logo logo logo ." ". about . poem ." ". about . poem .";
+}
+
+body .container .shadow1 {
+  position: absolute;
+  top: 15%;
+  left: 27%;
+}
+
+body .container .shadow2 {
+  position: absolute;
+  top: 25.5%;
+  left: 37%;
+}
+
+body .container .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: logo;
+  height: 50%;
+  width: 100%;
+}
+
+body .container .logo img {
+  height: 100%;
+  position: absolute;
+  top: 15%;
+  border-radius: 50%;
+}
+
+body .container .poem {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: poem;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: -10rem;
+}
+
+body .container .about {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: about;
+  margin-top: -10rem;
+}
+
+body .container .about .writer {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  border-bottom-right-radius: 5%;
+}
+
+body .empty {
+  margin-top: 30em;
+  height: 5rem;
+  color: transparent;
+}
+
+body {
+  background-color: #fff;
+  background-image: radial-gradient(#567d46 1.5px, #fff 1.5px);
+  background-size: 20px 20px;
+}
+
+.container {
+  background: #fff;
+  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5), 0 -10px 0 -5px #eee, 0 -10px 1px -4px rgba(0, 0, 0, 0.5), 0 -20px 0 -10px #eee, 0 -20px 1px -9px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5), 0 -10px 0 -5px #eee, 0 -10px 1px -4px rgba(0, 0, 0, 0.5), 0 -20px 0 -10px #eee, 0 -20px 1px -9px rgba(0, 0, 0, 0.5);
+  /* Padding for demo purposes */
+  padding: 30px;
+}
+
+.container .nature {
+  position: absolute;
+  top: 45%;
+  left: 36%;
+  opacity: 0.2;
+}
+
+.container .shadow1 {
+  color: transparent;
+  -webkit-text-stroke: 2px #567D46;
+  font-size: 20rem;
+  z-index: 2;
+  opacity: 0.2;
+  line-height: 340px;
+}
+
+.container .shadow2 {
+  color: transparent;
+  -webkit-text-stroke: 2px #567D46;
+  font-size: 20rem;
+  z-index: 2;
+  opacity: 0.2;
+  line-height: 340px;
+}
+
+.container .logo {
+  position: relative;
+  background-image: radial-gradient(#567D46 1.5px, #D4ECCB 1.5px);
+  background-size: 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-clip-path: polygon(6% 0, 100% 0, 100% 100%, 0 100%, 0 33%);
+          clip-path: polygon(6% 0, 100% 0, 100% 100%, 0 100%, 0 33%);
+  border-right: 4px dotted #567D46;
+  border-bottom-left-radius: 5%;
+}
+
+.container .logo img {
+  border: 4px dotted #567D46;
+  background: #fff;
+  background-size: 20px 20px;
+}
+
+.container .logo::after {
+  content: "";
+  position: absolute;
+  width: 5.5rem;
+  height: 5.5rem;
+  top: -5%;
+  left: -1.8%;
+  background-color: #567D46;
+}
+
+.container .poem {
+  background-image: radial-gradient(#567D46 1.5px, #D4ECCB 1.5px);
+  background-size: 20px 20px;
+  border-right: 4px dotted #567D46;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  -webkit-clip-path: polygon(8.5% 0, 100% 0, 100% 100%, 0 100%, 0 2.5%);
+          clip-path: polygon(8.5% 0, 100% 0, 100% 100%, 0 100%, 0 2.5%);
+  font-weight: 500;
+  border-bottom-left-radius: 5%;
+}
+
+.container .poem p {
+  color: #567D46;
+  font-family: "Comfortaa", cursive;
+  font-size: 24px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  line-height: 2.5rem;
+}
+
+.container .poem p::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: #567D46;
+  top: 17.2%;
+  left: 62.1%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container .about h1 {
+  color: #567D46;
+  font-family: "Comfortaa", cursive;
+  font-size: 32px;
+  background-image: radial-gradient(#567D46 1.5px, #D4ECCB 1.5px);
+  background-size: 20px 20px;
+  text-transform: uppercase;
+  text-align: end;
+  padding: 1rem;
+  border-right: 4px dotted #567D46;
+  -webkit-clip-path: polygon(6.5% 0, 100% 0, 100% 100%, 0 100%, 0 37.5%);
+          clip-path: polygon(6.5% 0, 100% 0, 100% 100%, 0 100%, 0 37.5%);
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  border-bottom-left-radius: 5%;
+}
+
+.container .about h1::before {
+  content: "";
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #567D46;
+  left: 13.3%;
+  top: 17%;
+}
+
+.container .about .para1 {
+  color: #567D46;
+  font-family: "Comfortaa", cursive;
+  background-image: radial-gradient(#567D46 1.5px, #D4ECCB 1.5px);
+  background-size: 20px 20px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2.5rem;
+  padding: 1.5rem;
+  padding-top: 2rem;
+  border-right: 4px dotted #567D46;
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
+          clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
+  text-align: justify;
+  border-bottom-left-radius: 5%;
+}
+
+.container .about .para2 {
+  position: relative;
+  color: #567D46;
+  font-family: "Comfortaa", cursive;
+  background-image: radial-gradient(#567D46 1.5px, #D4ECCB 1.5px);
+  background-size: 20px 20px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2.5rem;
+  padding: 1.5rem;
+  padding-top: 2rem;
+  border-right: 4px dotted #567D46;
+  -webkit-clip-path: polygon(8% 1.75%, 100% 1.75%, 100% 100%, 0 100%, 0 8%);
+          clip-path: polygon(8% 1.75%, 100% 1.75%, 100% 100%, 0 100%, 0 8%);
+  text-align: justify;
+  border-bottom-left-radius: 5%;
+}
+
+.container .about .para2::before {
+  content: "";
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #567D46;
+  top: 1.25%;
+  left: -1%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container .about .para1::before {
+  content: "";
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  left: 14.1%;
+  top: 36.1%;
+  background-color: #567D46;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=style.css.map */

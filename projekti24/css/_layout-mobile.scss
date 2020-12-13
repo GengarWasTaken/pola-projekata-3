@@ -1,0 +1,72 @@
+@media only screen and (max-width: 600px) {
+
+    body {
+
+
+
+
+.container {
+
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    button {
+        border-radius: 5%;
+        padding: 0.5rem 1rem;
+        width: 120px;
+        border: 0;
+        text-transform: capitalize;
+        font-size: 14px;
+            }
+
+    section {
+
+        
+        h1 {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 16px;
+
+            font-weight: 400;
+        }
+
+        button {
+            font-size: 14px;
+            padding-left: 1rem;
+            margin-top: -4rem;
+            margin-left: 1rem;
+        }
+
+        span {
+            font-size: 14px;
+            opacity: 0.5;
+        }
+
+
+    
+
+    .more {
+        span {
+            font-size: 12px;
+            opacity: 0.5;
+
+        }
+        i {
+            font-size: 12px;
+            padding-right: 0.5rem;
+        }
+    }
+}
+
+
+}
+
+}
+    }

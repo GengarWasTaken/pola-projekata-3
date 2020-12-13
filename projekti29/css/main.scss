@@ -1,0 +1,536 @@
+@import "reset";
+@import "layout";
+
+$font-stack: 'Libre Franklin', sans-serif;
+
+$background-color-1: #0B9399;
+$text-color: #fff;
+
+body {
+
+    font-family: $font-stack;
+    background-color: $background-color-1;
+    color: $text-color;
+    overflow-x: hidden;
+
+    header {
+
+        position: relative;
+        padding: 2em 1em;
+
+
+        h1 {
+            position: relative;
+            text-transform: uppercase;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 300;
+
+        }
+
+        h1::before {
+
+            content: "CSS ZEN GARDEN";
+            position: absolute;
+            font-size: 2rem;
+            left: 10%;
+            opacity: 0.3;
+
+        }
+
+        h1::after {
+
+            content: "";
+            position: absolute;
+            background-image: linear-gradient(to right, $text-color, $background-color-1);
+            height: 5%;
+            width: 100%;
+            top: 100%;
+            left: 0%;
+
+        }
+
+        h2 {
+
+            position: relative;
+            font-size: 1.25rem;
+            letter-spacing: 0.25rem;
+            line-height: 3rem;
+            margin-top: 1em;
+            color: transparent;
+            background-image: linear-gradient(to bottom, $text-color, $background-color-1);
+            background-clip: text;
+            background-size: 200% 200%;
+            font-weight: 100;
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            max-height: 25%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        h2::after {
+
+            content: "";
+            position: absolute;
+            top: 100%;
+            background-image: linear-gradient(to left, $text-color, $background-color-1);
+            height: 1%;
+            width: 100%;
+
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+
+    .summary {
+        position: relative;
+        padding: 1em 2em;   
+        z-index: 1;
+    
+
+        
+
+        p { 
+
+            width: 100%;
+            text-align: justify;
+            line-height: 1.25rem;
+            font-weight: 300;
+
+            a:first-child {
+
+                position: relative;
+
+            }
+
+            a:first-child::after {
+
+                content: url("../images/html.svg");
+                position: absolute;
+                height: 16px;
+                width: 16px;
+                top: 15%;
+                right: -25%;
+
+            }
+
+            a:last-child {
+
+                position: relative;
+
+            }
+
+            a:last-child::after {
+
+                content: url("../images/css.svg");
+                position: absolute;
+                width: 22.5px;
+                top: -10%;
+                right: -22.5%;
+
+            }
+
+
+        }
+
+        abbr {
+
+            filter: brightness(1.75);
+        }
+
+    }
+
+    .summary a {
+
+        text-decoration: none;
+        color: #3DF5FF;
+        border-bottom: 1px solid #3DF5FF;
+        letter-spacing: 0.25rem;
+
+    }
+
+    .summary::before {
+
+        content: "";
+        position: absolute;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        height: 100%;
+        width: 50%;
+        z-index: 0;
+        top: 0%;
+        left: 25%;
+        background-image: linear-gradient(to bottom, $text-color, $background-color-1);
+        opacity: 0.2;
+
+
+        
+
+    }
+
+    .preamble {
+        position: relative;
+        padding: 2em 1em;
+        line-height: 2rem;
+
+
+        p {
+
+
+                text-align: justify;
+
+
+        }
+
+        p::first-letter {
+
+            font-size: 1.25rem;
+            font-weight: 300;
+
+        }
+
+    }
+
+
+    .preamble h3::after {
+
+        content: "";
+        position: absolute;
+        height: 5%;
+        width: 100%;
+        background-image: linear-gradient(to left, $text-color, $background-color-1);
+        top: 50%;
+
+    }
+
+    @media screen and (min-width: 900px) {
+
+    .preamble h3:after {
+
+        width: 57%;
+
+    }
+
+    }
+
+    .preamble p::before {
+
+        content: "";
+        position: absolute;
+        height: 90%;
+        width: 100%;
+        background-image: linear-gradient(to right, $text-color, $background-color-1);
+        opacity: 0.1;
+        left: -5%;
+    }
+
+
+
+    h3 {
+        position: relative;
+        background-image: linear-gradient(to right, $text-color, $background-color-1);
+        background-clip: text;
+        color: transparent;
+        font-weight: 200;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+    }
+
+    .main h3::after {
+
+        content: "";
+        position: absolute;
+        height: 5%;
+        width: 100%;
+        background-image: linear-gradient(to left, $text-color, $background-color-1);
+        top: 50%;
+
+    }
+
+    @media screen and (min-width: 900px) {
+
+        .main h3::after {
+
+            width: 70%;
+            left: 30%;
+            z-index: 0;
+
+        }
+
+    }
+
+    .main {
+
+        background-image: url("../images/zen.png");
+        background-color: #0B9399;
+        background-size: 50% 25%;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-blend-mode: screen;
+
+
+        
+
+    }
+
+    .main a {
+
+        text-decoration: none;
+        color: #3DF5FF;
+        border-bottom: 1px solid #3DF5FF;
+        letter-spacing: 0.25rem;
+
+    }
+
+    .main div {
+
+        padding: 2em 1em;
+        position: relative;
+        line-height: 2rem;
+        text-align: justify;
+
+    }
+
+    p {
+        position: relative;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+
+    }
+
+    .main div p::before {
+
+        content: "";
+        position: absolute;
+        height: 95%;
+        width: 100%;
+        background-image: linear-gradient(to right, $text-color, $background-color-1);
+        opacity: 0.1;
+        left: -5%;
+    }
+
+
+    footer {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+
+            margin-left: 0.25em;
+            margin-right: 0.25em;
+
+        }
+
+    }
+
+    aside {
+
+        .select {
+
+            text-align: center;
+
+        }
+        .design-selection ul {
+            position: relative;
+            padding: 0em 1em;
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            font-size: 0.75rem;
+
+        }
+
+        .design-selection ul::before {
+
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(to right, $text-color, $background-color-1);
+            opacity: 0.2;
+
+        }
+
+        .design-selection  li {
+            position: relative;
+            width: 50%;
+            padding: 0.25em 2em;
+            height: 7.5em;
+            display: flex;
+            flex-direction: column; 
+            justify-content:    flex-start;
+            align-items: flex-start;
+            font-weight: 100;
+            border-bottom: 1px dotted #3DF5FF;
+            
+
+
+        }
+
+
+        @media screen and (min-width: 900px) {
+
+            .design-selection li {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+
+            }
+
+        }
+
+        .design-selection li:nth-child(odd) {
+
+            border-right: 1px dotted #3DF5FF;
+
+        }
+
+
+
+        .design-selection li a:first-child {
+
+            text-transform: uppercase;
+            color: $text-color;
+            text-decoration: none;
+            width: 75%;
+            font-weight: 500;
+            text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+            
+        }
+
+        .design-selection li a:last-child {
+
+            font-style: italic;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+
+        }
+
+        h3 {
+
+            padding: 1em 1em;
+
+        }
+
+
+
+
+    }
+
+
+    .design-archives {
+
+        h3 {
+
+            text-align: center;
+
+        }
+
+        ul {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            padding: 0;
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 50%;
+            padding: 0em 2em;
+            height: 7.5em;
+
+
+
+            a {
+                position: relative;
+                color: $text-color;
+                font-size: 1.25rem;
+                font-weight: 100;
+                text-decoration: none;
+                text-align: center;
+                
+
+            }
+
+
+
+
+        }
+
+        li::before {
+
+            content: "";
+            position: absolute;
+            height: 125%;
+            width: 100%;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            background-image: linear-gradient(to bottom, $text-color, $background-color-1);
+            opacity: 0.3;
+
+        }
+
+
+
+
+
+    }
+
+    .zen-resources {
+
+        h3 {
+
+            text-align: center;
+
+        }
+
+        ul {
+
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            align-items: center;
+            list-style-type: none;
+
+        }
+
+        ul a {
+
+            text-decoration: none;
+            color: #fff;
+            font-weight: 100;
+            letter-spacing: 0.25rem;
+            padding-top: 0.25em;
+
+
+        }
+
+
+    }
+
+}
+

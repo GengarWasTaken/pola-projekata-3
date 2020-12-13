@@ -1,0 +1,167 @@
+body {
+
+overflow-x: hidden;
+
+
+
+.container-1 {
+
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+                        ". . logo . . . nav nav nav nav . ."
+                        ". . logo . . . nav nav nav nav . ."
+                        ". . main main main main main main main main . ."
+                        ". . main main main main main main main main . ."
+                        ". . main main main main main main main main . ."
+                        ". . main main main main main main main main . ."
+                        ". . main main main main main main main main . ."
+                        "footer footer footer footer footer footer footer footer footer footer footer footer";
+
+
+    .logo {
+
+        grid-area: logo;
+
+    }
+
+    nav {
+
+        grid-area: nav;
+        align-self: center;
+        justify-self: end;
+
+    }
+
+
+    main{
+
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+    img {
+
+        width: 500px;
+        margin-top: -10rem;
+        margin-right: 10rem;
+        z-index: 0;
+    }
+
+    
+
+    .h1 {
+
+      z-index: 0;
+
+
+    }
+
+    p {
+
+        width: 40%;
+        margin-right: 9rem;
+        margin-top: 0.5rem;
+
+    }
+}
+
+    footer {
+
+        grid-area: footer;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        button {
+            position: relative;
+            margin-right: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+    
+    }
+
+}
+
+.container-2 {
+
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+h1 {
+    margin-top: 5rem;
+    margin-left: 45rem;
+}
+
+p {
+
+    margin-left: 45rem;
+    width: 700px;
+
+    
+}
+
+h2 {
+
+    margin-left: 45rem;
+    margin-top: 2.75rem;
+    
+
+
+}
+
+
+
+
+}
+
+
+.container-3 {
+
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+
+    img {
+
+        transform: rotateY(-180deg);
+        height: 75%;
+        margin-top: 7.5rem;
+    }
+
+    footer {
+
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5%;
+        margin-top: 4.25rem;
+    }
+
+    h1 {
+
+        margin-right: -12.5rem;
+        margin-top: 22.5rem;
+    }
+
+    .projects {
+
+        left: 7%;
+        top: 193%;
+    }
+
+}
+}

@@ -1,0 +1,85 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:  0.5fr 1fr 0.5fr;
+    grid-template-areas:
+                        ". h h h h h h h h h h ."
+                         ". . s s s s g g g g . ."
+                         "w w w w w w w w w w w w";
+
+    header {
+        grid-area: h;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+
+            img {
+               text-align: center; 
+            }
+        }
+
+        nav {
+
+            padding-left: 20rem;
+
+            a {
+                padding-left: 2.5rem;
+            }
+        }
+        
+    }
+
+    section {
+        grid-area: s;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: -4rem;
+
+        h1 {
+            width: 65%;
+        }
+
+        p {
+            width: 85%;
+            margin-top: -4rem;
+        }
+
+        button {
+            width: 20%;
+        }
+
+        span {
+            width: 100%;
+            margin-top: -5rem;
+        }
+        
+    }
+
+    .graph {
+        grid-area: g;
+
+        img {
+
+            height: 100%;
+
+        }
+    }
+
+    .more {
+        grid-area: m;
+        margin-top: -4rem;
+    }
+    
+    .wave {
+        grid-area: w;
+        margin-top: -7rem;
+    }
+
+  
+}

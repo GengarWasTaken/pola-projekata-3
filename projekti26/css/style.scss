@@ -1,0 +1,504 @@
+@import "reset";
+@import "layout";
+
+$primary-color: #212121;
+$secondary-color: #fff;
+$tertiary-color: #969799;
+$button-color: #2BB858;
+
+$font-stack: 'Merriweather Sans', sans-serif;
+
+
+
+
+body {
+        font-family: $font-stack;
+    .container-1 {
+
+        background-image: radial-gradient(circle at 62% 39%, rgba(30, 30, 30,0.05) 0%, rgba(30, 30, 30,0.05) 8%,transparent 8%, transparent 16%,transparent 16%, transparent 28%,transparent 28%, transparent 100%),radial-gradient(circle at 19% 61%, rgba(201, 201, 201,0.01) 0%, rgba(201, 201, 201,0.01) 59%,transparent 59%, transparent 60%,transparent 60%, transparent 99%,transparent 99%, transparent 100%),radial-gradient(circle at 15% 5%, rgba(186, 186, 186,0.05) 0%, rgba(186, 186, 186,0.05) 9%,transparent 9%, transparent 79%,transparent 79%, transparent 92%,transparent 92%, transparent 100%),radial-gradient(circle at 64% 49%, rgba(51, 51, 51,0.08) 0%, rgba(51, 51, 51,0.08) 22%,transparent 22%, transparent 50%,transparent 50%, transparent 96%,transparent 96%, transparent 100%),radial-gradient(circle at 53% 21%, rgba(0, 0, 0,0.04) 0%, rgba(0, 0, 0,0.04) 21%,transparent 21%, transparent 80%,transparent 80%, transparent 89%,transparent 89%, transparent 100%),radial-gradient(circle at 14% 91%, rgba(49, 49, 49,0.04) 0%, rgba(49, 49, 49,0.04) 35%,transparent 35%, transparent 63%,transparent 63%, transparent 71%,transparent 71%, transparent 100%),radial-gradient(circle at 42% 78%, rgba(64, 64, 64,0.02) 0%, rgba(64, 64, 64,0.02) 56%,transparent 56%, transparent 75%,transparent 75%, transparent 80%,transparent 80%, transparent 100%),radial-gradient(circle at 76% 85%, rgba(69, 69, 69,0.06) 0%, rgba(69, 69, 69,0.06) 53%,transparent 53%, transparent 68%,transparent 68%, transparent 97%,transparent 97%, transparent 100%),linear-gradient(90deg, rgb(143, 249, 177),rgb(62, 146, 80));
+    
+    header {
+
+        background-color: transparent;
+
+        .logo {
+        background-image: url("../images/logo.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 250px;
+        z-index: 1;
+        }
+
+        nav {
+
+            font-size: 1.25rem;
+
+            a {
+
+                text-decoration: none;
+                text-transform: capitalize;
+                font-weight: 600;
+                color: $secondary-color;
+                padding-left: 2rem;
+            }
+
+            .links {
+                
+                margin-right: 3rem;
+            }
+
+            .links::after {
+
+                border-right: 1.5px solid $secondary-color;
+            }
+        }
+    }
+
+    header::before {
+        background-color: $secondary-color;
+        opacity: 0.15;
+        z-index: 0;
+    }
+
+    main {
+        h1 {
+            color: $secondary-color;
+            font-size: 7rem;
+            font-weight: 900;
+        }
+
+        h1::after {
+            font-weight: 300;
+        }
+        h1::before {
+            font-weight: 300;
+        }
+
+        button {
+            height: 18.5%;
+            width: 18%;
+            border-radius: 40px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            border: 0;
+            color: $secondary-color;
+            font-weight: 500;
+            word-spacing: 0.75rem;
+        }
+        .free {
+            background-color: $button-color;
+            border: 2px solid #3AB152;
+            margin-right: 1rem;
+        }
+
+        .premium {
+            background: transparent;
+            border: 2px solid $secondary-color;
+            margin-left: 1rem;
+        }
+    }
+    }
+
+    .container-2 {
+
+        .albums {
+
+            margin-right: 15rem;
+            background-image: url("../images/whatson.png");
+            height: 650px;
+            width: 650px;
+            background-size: contain;
+        }
+
+        .info {
+
+            width: 30%;
+            margin-left: 15rem;
+
+            h1 {
+                font-size: 4rem;
+                width: 75%;
+                font-weight: 900;
+                margin-bottom: 2rem;
+                line-height: 80px;
+            }
+
+            h3 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                width: 60%;
+                font-size: 1rem;
+                margin-bottom: 2rem;
+
+            }
+        }
+    }
+
+    .container-3 {
+        background-image: radial-gradient(circle at 62% 39%, rgba(30, 30, 30,0.05) 0%, rgba(30, 30, 30,0.05) 8%,transparent 8%, transparent 16%,transparent 16%, transparent 28%,transparent 28%, transparent 100%),radial-gradient(circle at 19% 61%, rgba(201, 201, 201,0.01) 0%, rgba(201, 201, 201,0.01) 59%,transparent 59%, transparent 60%,transparent 60%, transparent 99%,transparent 99%, transparent 100%),radial-gradient(circle at 15% 5%, rgba(186, 186, 186,0.05) 0%, rgba(186, 186, 186,0.05) 9%,transparent 9%, transparent 79%,transparent 79%, transparent 92%,transparent 92%, transparent 100%),radial-gradient(circle at 64% 49%, rgba(51, 51, 51,0.08) 0%, rgba(51, 51, 51,0.08) 22%,transparent 22%, transparent 50%,transparent 50%, transparent 96%,transparent 96%, transparent 100%),radial-gradient(circle at 53% 21%, rgba(0, 0, 0,0.04) 0%, rgba(0, 0, 0,0.04) 21%,transparent 21%, transparent 80%,transparent 80%, transparent 89%,transparent 89%, transparent 100%),radial-gradient(circle at 14% 91%, rgba(49, 49, 49,0.04) 0%, rgba(49, 49, 49,0.04) 35%,transparent 35%, transparent 63%,transparent 63%, transparent 71%,transparent 71%, transparent 100%),radial-gradient(circle at 42% 78%, rgba(64, 64, 64,0.02) 0%, rgba(64, 64, 64,0.02) 56%,transparent 56%, transparent 75%,transparent 75%, transparent 80%,transparent 80%, transparent 100%),radial-gradient(circle at 76% 85%, rgba(69, 69, 69,0.06) 0%, rgba(69, 69, 69,0.06) 53%,transparent 53%, transparent 68%,transparent 68%, transparent 97%,transparent 97%, transparent 100%),linear-gradient(90deg, rgb(143, 249, 177),rgb(62, 146, 80));
+
+        background-size: 150% 175%;
+
+        .info2 {
+
+            height: 80%;
+            color: $secondary-color;
+            margin-top: 5rem;
+
+            h1 {
+                font-size: 4rem;
+                width: 75%;
+                font-weight: 900;
+                line-height: 80px;
+                margin-bottom: 2rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                width: 60%;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+                width: 88%;
+            }
+        }
+
+        .phone {
+
+            border: 2px solid $secondary-color;
+            border-radius: 25px;
+            margin-top: 11.5rem;
+
+            .pick {
+                color: $secondary-color;
+
+                h2 {
+                    position: relative;
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                h2::after {
+                    content: "";
+                    position: absolute;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 100%;
+                    border: 2px solid $secondary-color;
+                    left: 48%;
+                    top: -50%;
+                    font-weight: 300;
+                }
+
+                .mix-1-image {
+                    background-image: url("../images/leftpic.png");
+                    height: 150px;
+                    width: 150px;
+                    background-size: contain;
+                    margin-right: 0.25rem;
+
+                }
+
+                .mix-2-image {
+                    background-image: url("../images/rightpic.png");
+                    height: 150px;
+                    width: 150px;
+                    background-size: contain;
+                    margin-left: 0.25rem;
+                }
+
+                h4 {
+                    margin-top: 0.5rem;
+                    text-align: center;
+                    font-weight: 400;
+                }
+            }
+
+        .options {
+            color: $secondary-color;
+            margin-bottom: 4rem;
+
+            h2 {
+                line-height:  50px;
+                font-size: 1.1rem;
+                margin-left: 2.5rem;
+                font-weight: 500;
+                width: 100%;
+            }
+
+            i {
+                margin-right: 1rem;
+            }
+
+        }
+        }
+    }
+
+.container-4 {
+ 
+
+    .promo {
+
+        h1 {
+            font-size: 4rem;
+            width: 75%;
+            font-weight: 900;
+            line-height: 75px;
+            margin-bottom: 2rem;
+
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            margin-right: 1.25rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: 0.5rem;
+                color: #D9DADC;
+                margin-left: 1.25rem;
+            }
+        }
+
+        .players h3 {
+            color: #2BB858;
+        }
+    }
+    
+    .machine {
+        background-image: url("../images/machine.png");
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 700px;
+        background-size: contain;
+    }
+}
+
+.container-5 {
+
+    background-image: radial-gradient(circle at 62% 39%, rgba(30, 30, 30,0.05) 0%, rgba(30, 30, 30,0.05) 8%,transparent 8%, transparent 16%,transparent 16%, transparent 28%,transparent 28%, transparent 100%),radial-gradient(circle at 19% 61%, rgba(201, 201, 201,0.01) 0%, rgba(201, 201, 201,0.01) 59%,transparent 59%, transparent 60%,transparent 60%, transparent 99%,transparent 99%, transparent 100%),radial-gradient(circle at 15% 5%, rgba(186, 186, 186,0.05) 0%, rgba(186, 186, 186,0.05) 9%,transparent 9%, transparent 79%,transparent 79%, transparent 92%,transparent 92%, transparent 100%),radial-gradient(circle at 64% 49%, rgba(51, 51, 51,0.08) 0%, rgba(51, 51, 51,0.08) 22%,transparent 22%, transparent 50%,transparent 50%, transparent 96%,transparent 96%, transparent 100%),radial-gradient(circle at 53% 21%, rgba(0, 0, 0,0.04) 0%, rgba(0, 0, 0,0.04) 21%,transparent 21%, transparent 80%,transparent 80%, transparent 89%,transparent 89%, transparent 100%),radial-gradient(circle at 14% 91%, rgba(49, 49, 49,0.04) 0%, rgba(49, 49, 49,0.04) 35%,transparent 35%, transparent 63%,transparent 63%, transparent 71%,transparent 71%, transparent 100%),radial-gradient(circle at 42% 78%, rgba(64, 64, 64,0.02) 0%, rgba(64, 64, 64,0.02) 56%,transparent 56%, transparent 75%,transparent 75%, transparent 80%,transparent 80%, transparent 100%),radial-gradient(circle at 76% 85%, rgba(69, 69, 69,0.06) 0%, rgba(69, 69, 69,0.06) 53%,transparent 53%, transparent 68%,transparent 68%, transparent 97%,transparent 97%, transparent 100%),linear-gradient(90deg, rgb(143, 249, 177),rgb(62, 146, 80));
+    
+    background-size: 200% 200%;
+
+    
+
+    h1 {
+        font-size: 4rem;
+        color: #fff;
+        font-weight: 900;
+    }
+    
+
+    .top {
+        padding-top: 1rem;
+        border-bottom: 1px dotted black;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #000;
+        }
+
+        span {
+            font-size: 1rem;
+            
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: #000;
+        }
+
+        p {
+            color: #000;
+
+            span {
+                font-size: 1rem;
+                color: $button-color;
+            }
+        }
+
+    }
+
+    .perks {
+        margin-top: 1rem;
+        h3 {
+
+            color: #000;
+            font-size: 1rem;
+            line-height: 40px;
+        }
+
+        i {
+            margin-right: 0.5rem;
+        }
+    }
+
+    button {
+
+        height: 12.5%;
+        width: 80%;
+        border-radius: 40px;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        border: 0;
+        color: $secondary-color;
+        font-weight: 900;
+        word-spacing: 0.75rem;
+        background-color: $button-color;
+        border: 2px solid #3AB152;
+
+    }
+
+    .premium {
+        background-color: #fff;
+        border-radius: 10px;
+
+        box-shadow:
+  0 0.2px 1.2px rgba(0, 0, 0, 0.105),
+  0 0.5px 3.4px rgba(0, 0, 0, 0.15),
+  0 1.2px 8.1px rgba(0, 0, 0, 0.195),
+  0 4px 27px rgba(0, 0, 0, 0.3)
+;
+    }
+
+    .free {
+
+        background-color: #fff;
+        border-radius: 10px;
+
+        box-shadow:
+  0 0.2px 1.2px rgba(0, 0, 0, 0.105),
+  0 0.5px 3.4px rgba(0, 0, 0, 0.15),
+  0 1.2px 8.1px rgba(0, 0, 0, 0.195),
+  0 4px 27px rgba(0, 0, 0, 0.3);
+
+  .perks {
+
+    .faded {
+        opacity: 0.1;
+    }
+  }
+
+    }
+
+    p {
+        color: $secondary-color;
+        font-weight: 900;
+        width: 100%;
+        text-align: center;
+
+        span {
+
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.container-6 {
+
+    background-color: $primary-color;
+    color: #fff;
+
+    .linkwrapper {
+
+        .logo {
+            background-image: url("../images/logo2.png");
+            height: 200px;
+            width: 200px;
+            background-size: contain;
+            background-color: $primary-color;
+        }
+
+    h3 {
+
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: $tertiary-color;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        margin-top: 1rem;
+    }
+
+    .socials {
+
+        display: flex;
+        color: #fff;
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+
+        i {
+
+            font-size: 3rem;
+            margin-right: 2.5rem;
+            
+        }
+    }
+    }
+    }
+
+    footer {
+        color: $tertiary-color;
+
+        .legal {
+            margin-left: -2rem;
+
+        a {
+            text-decoration: none;
+            color: $tertiary-color;
+            margin-right: 2em;
+            font-size: .9em;
+        }
+    }
+
+        .usa {
+            font-size: .9em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            .flag {
+                display: inline-block;
+                background-image: url("../images/flag.png");
+                width: 50px;
+                height: 50px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin-left: 1.5rem;
+
+
+            }
+
+            p {
+                width: 100%;
+                font-size: .9em;
+                text-align: end;
+            }
+        }
+    }
+}
+
+}
+
+

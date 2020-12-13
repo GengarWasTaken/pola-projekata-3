@@ -1,0 +1,229 @@
+@import "reset";
+@import "layout";
+
+$primary-color: #567D46;
+$secondary-color: #fff;
+
+// $font-stack: 'Xanh Mono', monospace; //@at-root
+
+$font-stack: 'Comfortaa', cursive;
+
+body {
+    background-color: #fff;
+background-image: radial-gradient(#567d46 1.5px, #fff 1.5px);
+background-size: 20px 20px;
+
+
+
+
+
+
+}
+
+.container {
+
+  background: #fff;
+  box-shadow:
+    /* The top layer shadow */
+    0 -1px 1px rgba(0,0,0,0.5),
+    /* The second layer */
+    0 -10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 -10px 1px -4px rgba(0,0,0,0.5),
+     /* The third layer */
+    0 -20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 -20px 1px -9px rgba(0,0,0,0.5);
+    /* Padding for demo purposes */
+    padding: 30px;
+
+    .nature {
+      position:  absolute;
+      top: 45%;
+      left: 36%;
+
+      opacity: 0.2;
+    }
+        
+    .shadow1 {
+      
+      color: transparent;
+      -webkit-text-stroke: 2px $primary-color;
+      font-size: 20rem;
+      z-index: 2;
+      opacity: 0.2;
+      line-height: 340px;
+
+
+    }
+    .shadow2 {
+      
+      color: transparent;
+      -webkit-text-stroke: 2px $primary-color;
+      font-size: 20rem;
+      z-index: 2;
+      opacity: 0.2;
+      line-height: 340px;
+    }
+
+    .logo {
+      position: relative;
+        background-image: radial-gradient($primary-color 1.5px, #D4ECCB 1.5px);
+        background-size: 20px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(6% 0, 100% 0, 100% 100%, 0 100%, 0 33%);
+
+        border-right: 4px dotted $primary-color;
+        border-bottom-left-radius: 5%;
+
+        img {
+          border: 4px dotted $primary-color;
+          background: $secondary-color;
+          background-size: 20px 20px;
+        }
+
+
+        
+    }
+
+
+    .logo::after {
+      content: "";
+      position: absolute;
+      width: 5.5rem;
+      height: 5.5rem;
+      top: -5%;
+      left: -1.8%;
+      background-color: $primary-color;
+    }
+    .poem {
+
+      background-image: radial-gradient($primary-color 1.5px, #D4ECCB 1.5px);
+      background-size: 20px 20px;
+        border-right: 4px dotted $primary-color;
+        padding-bottom: 2.5rem;
+        padding-top: 2.5rem;
+        clip-path: polygon(8.5% 0, 100% 0, 100% 100%, 0 100%, 0 2.5%);
+        font-weight: 500;
+        border-bottom-left-radius: 5%;
+        
+
+
+    p {
+        color: $primary-color;
+        font-family: $font-stack;
+        font-size: 24px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        line-height: 2.5rem;
+        
+    }
+
+    p::before {
+      content: "";
+          position: absolute;
+          width: 2rem;
+          height: 2rem;
+          background-color: $primary-color;
+          top: 17.2%;
+          left: 62.1%;
+          clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+          transform: rotate(180deg);
+    }
+    }
+
+    .about {
+
+
+        h1 {
+            color: $primary-color;
+            font-family: $font-stack;
+            font-size: 32px;
+            background-image: radial-gradient($primary-color 1.5px, #D4ECCB 1.5px);
+            background-size: 20px 20px;
+            text-transform: uppercase;
+            text-align: end;
+            padding: 1rem;
+            border-right: 4px dotted $primary-color;
+            clip-path: polygon(6.5% 0, 100% 0, 100% 100%, 0 100%, 0 37.5%);
+            letter-spacing: 0.5rem;
+            font-weight: 700;
+            border-bottom-left-radius: 5%;
+
+         
+        }
+
+        h1::before {
+          content: "";
+          position: absolute;
+          width: 2.25rem;
+          height: 2.25rem;
+          background-color: $primary-color;
+          left: 13.3%;
+          top: 17%;
+        }
+
+        .para1 {
+            color: $primary-color;
+            font-family: $font-stack;
+            background-image: radial-gradient($primary-color 1.5px, #D4ECCB 1.5px);
+            background-size: 20px 20px;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 2.5rem;
+            padding: 1.5rem;
+            padding-top: 2rem;
+            border-right: 4px dotted $primary-color;
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
+            text-align: justify;
+            border-bottom-left-radius: 5%;
+        }
+
+        .para2 {
+          position: relative;
+          color: $primary-color;
+          font-family: $font-stack;
+          background-image: radial-gradient($primary-color 1.5px, #D4ECCB 1.5px);
+          background-size: 20px 20px;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 2.5rem;
+          padding: 1.5rem;
+          padding-top: 2rem;
+          border-right: 4px dotted $primary-color;
+          clip-path: polygon(8% 1.75%, 100% 1.75%, 100% 100%, 0 100%, 0 8%);
+          text-align: justify;
+          border-bottom-left-radius: 5%;
+        }
+
+
+
+        .para2::before {
+          content: "";
+          position: absolute;
+          width: 2.25rem;
+          height: 2.25rem;
+          background-color: $primary-color;
+          top: 1.25%;
+          left: -1%;
+          clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+          transform: rotate(180deg);
+        }
+
+        .para1::before {
+          content: "";
+          position: absolute;
+          width: 2.25rem;
+          height: 2.25rem;
+          left: 14.1%;
+          top: 36.1%;
+          background-color: $primary-color;
+          clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+          transform: rotate(180deg);
+        }
+
+     
+    }
+  }

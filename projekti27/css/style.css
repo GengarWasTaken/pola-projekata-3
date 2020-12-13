@@ -1,0 +1,568 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body .container-1 {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
+      grid-template-areas: ". . logo . . . nav nav nav nav . ." ". . logo . . . nav nav nav nav . ." ". . main main main main main main main main . ." ". . main main main main main main main main . ." ". . main main main main main main main main . ." ". . main main main main main main main main . ." ". . main main main main main main main main . ." "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+body .container-1 .logo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: logo;
+}
+
+body .container-1 nav {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 4;
+  grid-area: nav;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+body .container-1 main {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-area: main;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+body .container-1 main img {
+  width: 500px;
+  margin-top: -10rem;
+  margin-right: 10rem;
+  z-index: 0;
+}
+
+body .container-1 main .h1 {
+  z-index: 0;
+}
+
+body .container-1 main p {
+  width: 40%;
+  margin-right: 9rem;
+  margin-top: 0.5rem;
+}
+
+body .container-1 footer {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .container-1 footer button {
+  position: relative;
+  margin-right: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container-2 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container-2 h1 {
+  margin-top: 5rem;
+  margin-left: 45rem;
+}
+
+body .container-2 p {
+  margin-left: 45rem;
+  width: 700px;
+}
+
+body .container-2 h2 {
+  margin-left: 45rem;
+  margin-top: 2.75rem;
+}
+
+body .container-3 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: hidden;
+}
+
+body .container-3 img {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  height: 75%;
+  margin-top: 7.5rem;
+}
+
+body .container-3 footer {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5%;
+  margin-top: 4.25rem;
+}
+
+body .container-3 h1 {
+  margin-right: -12.5rem;
+  margin-top: 22.5rem;
+}
+
+body .container-3 .projects {
+  left: 7%;
+  top: 193%;
+}
+
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+* .container-1 {
+  background-color: lightgreen;
+}
+
+* .container-1 .logo {
+  background-image: url("../images/tikigiki_eco-peace-001.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+* .container-1 nav {
+  margin-bottom: 2.5rem;
+}
+
+* .container-1 nav a {
+  color: #3F3D56;
+  font-size: 2rem;
+  position: relative;
+  text-decoration: none;
+  margin-right: 2rem;
+  text-shadow: 2px 2px 2px rgba(140, 198, 64, 0.5);
+}
+
+* .container-1 nav a i {
+  color: #076839;
+}
+
+* .container-1 main .h1 {
+  position: relative;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #3AB54A;
+  text-shadow: 2.5px 2.5px 1px #8cc640;
+}
+
+* .container-1 main .h12 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px #3AB54A;
+  margin-top: -7.5rem;
+  z-index: 1;
+}
+
+* .container-1 main p {
+  font-size: 2rem;
+  line-height: 40px;
+  letter-spacing: 0.1rem;
+  color: #3F3D56;
+  position: relative;
+  text-align: justify;
+  color: #076839;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.5);
+}
+
+* .container-1 main p .span1 {
+  color: #076839;
+  font-size: 30px;
+}
+
+* .container-1 main p .span2 {
+  color: #8CC640;
+  font-size: 30px;
+}
+
+* .container-1 main p .span3 {
+  color: #8CC640;
+  font-size: 2rem;
+}
+
+* .container-1 footer {
+  background-color: #076839;
+}
+
+* .container-1 footer button {
+  position: absolute;
+  text-transform: uppercase;
+  padding: 0rem 2rem;
+  color: #8CC640;
+  background-color: #076839;
+  margin-top: -15rem;
+  border-radius: 10px;
+  letter-spacing: 0.25rem;
+  border: 0px;
+  -webkit-box-shadow: 0 0.7px 0.6px rgba(0, 0, 0, 0.039), 0 1.7px 1.3px rgba(0, 0, 0, 0.057), 0 3.1px 2.5px rgba(0, 0, 0, 0.07), 0 5.6px 4.5px rgba(0, 0, 0, 0.083), 0 10.4px 8.4px rgba(0, 0, 0, 0.101), 0 25px 20px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0.7px 0.6px rgba(0, 0, 0, 0.039), 0 1.7px 1.3px rgba(0, 0, 0, 0.057), 0 3.1px 2.5px rgba(0, 0, 0, 0.07), 0 5.6px 4.5px rgba(0, 0, 0, 0.083), 0 10.4px 8.4px rgba(0, 0, 0, 0.101), 0 25px 20px rgba(0, 0, 0, 0.14);
+}
+
+* .container-1 footer button h3 {
+  position: relative;
+  font-size: 3em;
+  padding-right: 2rem;
+  -webkit-text-stroke: 1px #3AB54A;
+  color: #befd6b;
+}
+
+* .container-1 footer button h3::before {
+  content: "";
+  position: absolute;
+  border-right: 4px dotted #8CC640;
+  height: 50px;
+  top: 17%;
+  left: 72%;
+  width: 50px;
+}
+
+* .container-1 footer button i {
+  font-size: 3em;
+  margin-left: 1rem;
+  -webkit-text-stroke: 1px #3AB54A;
+  color: #befd6b;
+}
+
+* .container-2 {
+  background-image: url("../images/undraw_flowers_vx06.svg");
+  background-repeat: no-repeat;
+  background-size: 50% 75%;
+  background-color: #90EE90;
+  background-position: left;
+  background-attachment: fixed;
+}
+
+* .container-2 h1 {
+  position: relative;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #076839;
+  text-shadow: 2.5px 2.5px 1px #8cc640;
+  letter-spacing: 20px;
+}
+
+* .container-2 h1::before {
+  content: "evergreen";
+  position: absolute;
+  color: #3F3D56;
+  opacity: 0.1;
+  font-size: 10rem;
+  top: -100%;
+  left: -65%;
+  letter-spacing: 50px;
+  z-index: 0;
+}
+
+* .container-2 p {
+  font-size: 1.5rem;
+  line-height: 50px;
+  letter-spacing: 0.1rem;
+  color: #3F3D56;
+  position: relative;
+  text-align: justify;
+  color: #076839;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.5);
+  z-index: 0;
+  margin-top: 1.5rem;
+  text-indent: 10px;
+}
+
+* .container-2 p:nth-child(4) {
+  border-bottom: 2px solid #8CC640;
+  padding-bottom: 2rem;
+}
+
+* .container-2 p::first-letter {
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+
+* .container-2 h2 {
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #076839;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .container-2 h2 i {
+  color: #8CC640;
+  font-size: 5rem;
+  margin-left: 1.25rem;
+}
+
+* .container-3 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(30.1%, #90EE90), color-stop(30.1%, #076839), color-stop(75%, #076839), color-stop(50%, #90EE90));
+  background: linear-gradient(90deg, #90EE90 30.1%, #076839 30.1%, #076839 75%, #90EE90 50%);
+}
+
+* .container-3 h1 {
+  position: relative;
+  font-size: 10rem;
+  text-transform: uppercase;
+  color: #BEFD6B;
+  letter-spacing: 20px;
+  -webkit-text-stroke: 2px #3AB54A;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+* .container-3 .projects {
+  position: absolute;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+* .container-3 .projects h3 {
+  font-size: 1.5rem;
+  color: #076839;
+  margin-top: 0.5rem;
+  margin-left: 9.7rem;
+  width: 40%;
+  text-align: end;
+  font-weight: 300;
+  padding-right: 5rem;
+}
+
+* .container-3 .projects .project1 {
+  position: relative;
+  height: 250px;
+  width: auto;
+}
+
+* .container-3 .projects .project1 img {
+  width: 300px;
+  height: 200px;
+}
+
+* .container-3 .projects .project1 .title1 {
+  position: relative;
+}
+
+* .container-3 .projects .project1 .title1::before {
+  content: "ENVIRONMENTAL";
+  position: absolute;
+  border-right: 2px dotted #3F3D56;
+  color: transparent;
+  left: 25%;
+}
+
+* .container-3 .projects .project2 {
+  position: relative;
+  height: 250px;
+  width: auto;
+  margin-top: 3rem;
+}
+
+* .container-3 .projects .project2 img {
+  width: 300px;
+  height: 200px;
+}
+
+* .container-3 .projects .project2 h3 {
+  border-right: 2px dotted #3F3D56;
+}
+
+* .container-3 .projects .project3 {
+  position: relative;
+  margin-top: 3rem;
+  height: 250px;
+  width: auto;
+}
+
+* .container-3 .projects .project3 img {
+  width: 300px;
+  height: 200px;
+  z-index: 0;
+}
+
+* .container-3 .projects .project3 h3 {
+  border-right: 2px dotted #3F3D56;
+}
+
+* .container-3 footer {
+  background-color: #076839;
+  color: #8CC640;
+  text-transform: uppercase;
+}
+
+* .container-3 footer i {
+  margin-left: 0rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+* .container-3 footer span {
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.25px 0.25px 0.25px #90EE90;
+}
+/*# sourceMappingURL=style.css.map */

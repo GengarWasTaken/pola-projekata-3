@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    
+
+    .container {
+    position: relative;
+    height: 200vh;
+    width: 80vw;
+    display: grid;
+    margin-top: 1.5rem;
+    grid-template-columns: .5fr 1fr 1fr 1fr .5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". logo logo logo ."
+                         ". about . poem ."
+                         ". about . poem .";
+
+    
+        
+
+    .shadow1 {
+        position: absolute;
+        top: 15%;
+        left: 27%;
+    }
+
+    .shadow2 {
+        position: absolute;
+        top: 25.5%;
+        left: 37%;
+    }
+
+    .logo {
+
+        grid-area: logo;
+        height: 50%;
+        width: 100%;
+
+    img {
+        height: 100%;
+        position: absolute;
+        top: 15%;
+        border-radius: 50%;
+
+    }
+
+    }
+
+    .poem {
+        grid-area: poem;
+        width: 100%;
+        height: fit-content;
+        margin-top: -10rem;
+
+    }
+
+    .about {
+        grid-area: about;
+        margin-top: -10rem;
+
+        
+
+    .writer {
+        width: 100%;
+        height: fit-content;
+        transform: rotateY(180deg);
+        border-bottom-right-radius: 5%;
+
+    }
+    }
+    }
+.empty {
+    margin-top: 30em;
+    height: 5rem;
+    color: transparent;
+}
+
+
+}

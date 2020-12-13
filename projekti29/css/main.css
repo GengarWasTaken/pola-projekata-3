@@ -1,0 +1,629 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .page-wrapper {
+    margin: 0% auto;
+    max-width: 900px;
+  }
+  .page-wrapper header h1::before {
+    left: 35%;
+  }
+  .page-wrapper .summary p {
+    margin: 0% auto;
+    width: 50%;
+  }
+  .page-wrapper .summary a:first-child {
+    margin-right: 1em;
+  }
+  .page-wrapper .summary a:first-child::after {
+    right: -35%;
+    margin-right: 1em;
+    top: 13%;
+  }
+  .page-wrapper .summary::before {
+    height: 125%;
+    width: 25%;
+    left: 37%;
+  }
+  .preamble {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .preamble p {
+    width: 25%;
+  }
+  .preamble h3 {
+    width: 100%;
+  }
+  .explanation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .explanation h3 {
+    width: 100%;
+  }
+  .explanation p {
+    width: 40%;
+  }
+  .participation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .participation h3 {
+    width: 100%;
+  }
+  .participation p {
+    width: 25%;
+  }
+  .benefits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .benefits h3 {
+    width: 100%;
+  }
+  .benefits p {
+    width: 50%;
+  }
+  .requirements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .requirements h3 {
+    width: 100%;
+  }
+  .requirements p {
+    width: 40%;
+  }
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #0B9399;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+body header {
+  position: relative;
+  padding: 2em 1em;
+}
+
+body header h1 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+body header h1::before {
+  content: "CSS ZEN GARDEN";
+  position: absolute;
+  font-size: 2rem;
+  left: 10%;
+  opacity: 0.3;
+}
+
+body header h1::after {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to right, #fff, #0B9399);
+  height: 5%;
+  width: 100%;
+  top: 100%;
+  left: 0%;
+}
+
+body header h2 {
+  position: relative;
+  font-size: 1.25rem;
+  letter-spacing: 0.25rem;
+  line-height: 3rem;
+  margin-top: 1em;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to bottom, #fff, #0B9399);
+  background-clip: text;
+  background-size: 200% 200%;
+  font-weight: 100;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
+  max-height: 25%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body header h2::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to left, #fff, #0B9399);
+  height: 1%;
+  width: 100%;
+}
+
+body .summary {
+  position: relative;
+  padding: 1em 2em;
+  z-index: 1;
+}
+
+body .summary p {
+  width: 100%;
+  text-align: justify;
+  line-height: 1.25rem;
+  font-weight: 300;
+}
+
+body .summary p a:first-child {
+  position: relative;
+}
+
+body .summary p a:first-child::after {
+  content: url("../images/html.svg");
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: 15%;
+  right: -25%;
+}
+
+body .summary p a:last-child {
+  position: relative;
+}
+
+body .summary p a:last-child::after {
+  content: url("../images/css.svg");
+  position: absolute;
+  width: 22.5px;
+  top: -10%;
+  right: -22.5%;
+}
+
+body .summary abbr {
+  -webkit-filter: brightness(1.75);
+          filter: brightness(1.75);
+}
+
+body .summary a {
+  text-decoration: none;
+  color: #3DF5FF;
+  border-bottom: 1px solid #3DF5FF;
+  letter-spacing: 0.25rem;
+}
+
+body .summary::before {
+  content: "";
+  position: absolute;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 100%;
+  width: 50%;
+  z-index: 0;
+  top: 0%;
+  left: 25%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to bottom, #fff, #0B9399);
+  opacity: 0.2;
+}
+
+body .preamble {
+  position: relative;
+  padding: 2em 1em;
+  line-height: 2rem;
+}
+
+body .preamble p {
+  text-align: justify;
+}
+
+body .preamble p::first-letter {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+body .preamble h3::after {
+  content: "";
+  position: absolute;
+  height: 5%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to left, #fff, #0B9399);
+  top: 50%;
+}
+
+@media screen and (min-width: 900px) {
+  body .preamble h3:after {
+    width: 57%;
+  }
+}
+
+body .preamble p::before {
+  content: "";
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to right, #fff, #0B9399);
+  opacity: 0.1;
+  left: -5%;
+}
+
+body h3 {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to right, #fff, #0B9399);
+  background-clip: text;
+  color: transparent;
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+body .main h3::after {
+  content: "";
+  position: absolute;
+  height: 5%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to left, #fff, #0B9399);
+  top: 50%;
+}
+
+@media screen and (min-width: 900px) {
+  body .main h3::after {
+    width: 70%;
+    left: 30%;
+    z-index: 0;
+  }
+}
+
+body .main {
+  background-image: url("../images/zen.png");
+  background-color: #0B9399;
+  background-size: 50% 25%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+}
+
+body .main a {
+  text-decoration: none;
+  color: #3DF5FF;
+  border-bottom: 1px solid #3DF5FF;
+  letter-spacing: 0.25rem;
+}
+
+body .main div {
+  padding: 2em 1em;
+  position: relative;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+body p {
+  position: relative;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+body .main div p::before {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to right, #fff, #0B9399);
+  opacity: 0.1;
+  left: -5%;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer a {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+body aside .select {
+  text-align: center;
+}
+
+body aside .design-selection ul {
+  position: relative;
+  padding: 0em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+  font-size: 0.75rem;
+}
+
+body aside .design-selection ul::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to right, #fff, #0B9399);
+  opacity: 0.2;
+}
+
+body aside .design-selection li {
+  position: relative;
+  width: 50%;
+  padding: 0.25em 2em;
+  height: 7.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-weight: 100;
+  border-bottom: 1px dotted #3DF5FF;
+}
+
+@media screen and (min-width: 900px) {
+  body aside .design-selection li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body aside .design-selection li:nth-child(odd) {
+  border-right: 1px dotted #3DF5FF;
+}
+
+body aside .design-selection li a:first-child {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  width: 75%;
+  font-weight: 500;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+body aside .design-selection li a:last-child {
+  font-style: italic;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+body aside h3 {
+  padding: 1em 1em;
+}
+
+body .design-archives h3 {
+  text-align: center;
+}
+
+body .design-archives ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 150px;
+  padding: 0;
+}
+
+body .design-archives li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50%;
+  padding: 0em 2em;
+  height: 7.5em;
+}
+
+body .design-archives li a {
+  position: relative;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 100;
+  text-decoration: none;
+  text-align: center;
+}
+
+body .design-archives li::before {
+  content: "";
+  position: absolute;
+  height: 125%;
+  width: 100%;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#0B9399));
+  background-image: linear-gradient(to bottom, #fff, #0B9399);
+  opacity: 0.3;
+}
+
+body .zen-resources h3 {
+  text-align: center;
+}
+
+body .zen-resources ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+body .zen-resources ul a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 0.25rem;
+  padding-top: 0.25em;
+}
+/*# sourceMappingURL=main.css.map */
